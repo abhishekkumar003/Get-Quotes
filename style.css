@@ -154,5 +154,15 @@ body{
         width: 90vw;
         height: 90vh;
     }
+     .box{
+        width: 98%;
+        height: 85%;
+    }
+
+    .author{
+        position: absolute;
+        top: 75%;
+        left: 40%;
+    }
 
 }
