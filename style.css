@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Ephesis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(31, 46, 59);
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50vw;
+    height: 70vh;
+    background-image: linear-gradient(45deg,blue,red);
+    border-radius: 5px;
+    font-family: 'Baloo 2', cursive;
+    overflow: hidden;
+    color: rgb(187, 37, 37);
+    letter-spacing: 0.5px;
+    display: grid;
+    place-items: center;
+}
+
+.inner{
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    opacity: 1;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 70%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background-color: rgb(159, 172, 216);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 1.5rem black;
+    font-size: 1.3rem;
+}
+
+.number::before{
+    content: "";
+    position: absolute;
+    top: -130px;
+    right: -30px;
+    width: 90px;
+    height: 200px;
+    background-color: rgb(153, 223, 156);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    z-index: -1;
+    box-shadow: 0 0 0.7rem black;
+    overflow: hidden;
+}
+
+.number{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    margin: 0;
+    top: 15px;
+    right: 15px;
+    color:rgb(31, 46, 59);
+}
+
+.number img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -22px;
+    top: -7px;
+    cursor: pointer;
+    animation: rot 1s linear;
+}
+
+.number:hover img{
+    animation: rot 1s linear;
+}
+
+@keyframes rot{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.quotes{
+    position: absolute;
+    top: 35%;
+    left: 8%;
+    font-family: 'Ephesis', cursive;
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+.fas{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: rgb(72, 173, 177);
+}
+
+.author::before{
+    content: "by - ";
+}
+
+.author{
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    font-family: 'Playball', cursive;
+    color: rgb(20, 48, 207);
+}
+
+
+
+
+.button{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 10vh;
+    width: 100%;
+    background-color: royalblue;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.button p{
+    text-align: center;
+    font-size: 35px;
+    margin-top: 5px;
+    color: black;
+    cursor: pointer;
+
+}
+
+@media screen and (max-width:720px){
+    .container{
+        width: 90vw;
+        height: 90vh;
+    }
+
+}
